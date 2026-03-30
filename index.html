@@ -10,7 +10,6 @@ audio {
     display: none; 
 }
 
-/* --- Tło pulpitu XP --- */
 body {
   margin: 0;
   padding: 0;
@@ -21,7 +20,7 @@ body {
   cursor: default;
 }
 
-/* --- Pasek zadań --- */
+
 #taskbar {
   position: fixed;
   bottom: 0;
@@ -60,7 +59,7 @@ body {
   background: linear-gradient(#00b200, #0a8000);
 }
 
-/* --- Godzina --- */
+
 #clock {
   color: white;
   font-weight: bold;
@@ -163,7 +162,7 @@ body {
   background: linear-gradient(#cbe2ff, #ffffff);
 }
 
-/* --- Content --- */
+
 .content {
   flex: 1;
   padding: 10px;
@@ -209,7 +208,7 @@ body {
 
 <button onclick="audio.play()">Odtwórz dźwięk</button>
 
-<!-- Pasek zadań -->
+
 <div id="taskbar">
   <div id="taskbar-left">
     <button id="startBtn">Start</button>
@@ -217,7 +216,7 @@ body {
   <div id="clock">12:00 01/01/2009</div>
 </div>
 
-<!-- --- Start Menu --- -->
+
 <div id="startMenu">
   <ul>
     <li onclick="openWindow('home'); toggleStartMenu()">
@@ -235,7 +234,7 @@ body {
   </ul>
 </div>
 
-<!-- --- Okno home --- -->
+
 <div id="home" class="window">
   <div class="titlebar">
     <span>Początek</span>
@@ -246,7 +245,7 @@ body {
     </div>
   </div>
   <div class="content">
-    <h2>Hejo w moim "windowsie" :3c</h2>
+    <h2>Hejo w moim "windowsie"</h2>
     <h3>możesz tą i inne aplikację schować przesunąć i powiększyć na cały ekran :3</h3>
     <p>kliknij w poniższe aby otwożyć kolejne aplikacje które mówią o mnie ^^</p>
     <p>kliknij w odtwórz dźwięk aby sobie posłuchać melodyjki :3</p>
@@ -256,7 +255,7 @@ body {
   </div>
 </div>
 
-<!-- --- Okno o mnie --- -->
+
 <div id="about" class="window">
   <div class="titlebar">
     <span>O mnie</span>
@@ -274,15 +273,15 @@ body {
     <p>lubię kodować i oglądać różne filmy i seriale tylko muszę je oglądać z kimś bo za bardzo samemu nie lubię oglądać czuje się w tedy samotnie i pusto gdy to oglądam</p>
     <p>moim ulubionym filmem jest "Harry Poter i kamień fizoloficzny" i moim ulubionym serialem jest rick i morty tak samo jak wyspa totalnej poraszki. Bardzo fajnie się mi je oglądało kiedyś ale teraz są słabo dostępne 3:</p>
 <p>mam dysleksje i często się mylę w pisaniu i czytaniu więc jak będe z tobą pisał i zrobię błąd prosze nie wytykaj tego palcem że ten błąd zrobiłem to bardzo nie miłe </p>
-    <p>Bardzo dziękuje za przeczytanie życzę tobie miłego dnia :3</p>
+    <p>Bardzo dziękuje za przeczytanie życzę tobie miłego dnia, lub nocy :3</p>
    <p>©Radosław G</p>
   </div>
 </div>
 
-<!-- --- Okno gier --- -->
+
 <div id="games" class="window">
   <div class="titlebar">
-    <span>Gry które lubię ;3 :</span>
+    <span>Gry które lubię :</span>
     <div class="controls">
       <button onclick="minimizeWindow('games')">_</button>
       <button onclick="maximizeWindow('games')">□</button>
@@ -291,11 +290,11 @@ body {
   </div>
   <div class="content">
     <ul>
-       <li>1. Changed – jedna z gier które bardzo lubię grać ,ale szybko się skończyła 3:</li>
+       <li>1. Changed – jedna z gier które bardzo lubię grać ,ale szybko się ją przechodzi 3:</li>
       <li>2. Undertale – gra która ma fajny lore ale ma nie najleprzy fandom</li>
       <li>3. VRChat – poznałem tu dużo ludzi, ale ostatnio nie gram z chęcią zagłam kiedy będe miał czas ^^</li>
-      <li>4. Roblox – dużo dobrych gier, ale masa nudnych kopii o breinrotach które nie są fajne nawet do widzenia</li>
-      <li>5. Minecraft – podstawowy jest już nudny i taki szybi do pokonania ale z modami jest ciekawie i zabawnie ze znajomymi i nawet samemu</li>
+      <li>4. Roblox – dużo dobrych gier, ale masa nudnych kopii o brainrotach</li>
+      <li>5. Minecraft – java jest fajna do grania samemu a z modami jak z kumplami</li>
       <li>6. Terraria – niedawno zaczołem grać ale nie wiem co dalej robić i zagram gdy będe miał chęć i dużo czasu wolnego :P</li>
     </ul>
   </div>
@@ -370,7 +369,7 @@ windows.forEach(win => {
   });
 });
 
-// --- Zegar ---
+
 function updateClock() {
   const now = new Date();
   const hours = String(now.getHours()).padStart(2, '0');
@@ -385,7 +384,7 @@ function updateClock() {
 setInterval(updateClock, 1000);
 updateClock();
 
-// --- Audio ---
+// -0-0- Audio ---------O-0----0-----0---------------0----------------0-------------0-------------0-------------0------------0----------------0--------------0---------------0-------------0----------------0-------------0----------------0
 var audio = new Audio('melodia.mp3');
 audio.loop = true;
 
@@ -393,7 +392,7 @@ audio.play().catch(err => {
   console.warn("Autoplay zablokowany:", err);
 });
 
-// --- Pokazanie strony głównej przy starcie ---
+
 openWindow('home');
 </script>
 
